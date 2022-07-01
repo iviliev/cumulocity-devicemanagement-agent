@@ -91,7 +91,16 @@
         "pattern": [
           "c8y_Message.text"
         ]
-      }
+      },
+      {
+        "msgId": "dm503",
+        "condition": "c8y_SendCertificate",
+        "base": "",
+        "name": "Certtificate",
+        "pattern": [
+          "c8y_SendCertificate.url"
+        ]
+      }	  
     ]
   },
   "__externalId": "c8y-dm-agent-v1.0"
