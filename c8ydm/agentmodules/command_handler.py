@@ -64,6 +64,9 @@ class CommandHandler(Listener):
             CommandAlias('show disk-usage', 'df -h'),
             CommandAlias('show agent logs', 'cat ~/.cumulocity/agent.log'),
             CommandAlias('remove apt-lists', 'rm -rf /var/lib/apt/lists/*'),
+            CommandAlias(
+                'generate keys', 'ssh-keygen -t rsa -b 4096 -f \"certificates\" -P \"\"'),
+            CommandAlias('get public key', 'cat certificates.pub'),            
             CommandAliasWithArgs(
                 r'show logs (\w+) ?(ERROR|WARN|INFO|DEBUG)?',
                 'journalctl -u \\1 -n 100 | grep "\\2"',
